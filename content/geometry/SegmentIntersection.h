@@ -37,3 +37,19 @@ template<class P> vector<P> segInter(P a, P b, P c, P d) {
 	if (onSegment(a, b, d)) s.insert(d);
 	return {all(s)};
 }
+
+// leon
+
+vector<pt> segInter(pt a, pt b, pt c, pt d){
+	auto oa = ccw(c,d,a), ob = ccw(c,d,b), 
+		 oc = ccw(a,b,c), od = ccw(a,b,d);
+	// checks if intersection is single non-endpoint point
+	if (sgn(oa) * sgn(ob) < 0 && sgn(oc) * sgn(od) <0)
+		return {(a*ob - b*oa)/(ob - oa)};
+	set<pt> s;
+	if (onSegment(c,d,a)) s.insert(a);
+	if (onSegment(c,d,b)) s.insert(b);
+	if (onSegment(a,b,c)) s.insert(c);
+	if (onSegment(a,b,d)) s.insert(d);
+	return {all(s)};
+}

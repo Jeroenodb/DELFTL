@@ -26,3 +26,14 @@ P ccCenter(const P& A, const P& B, const P& C) {
 	P b = C-A, c = B-A;
 	return A + (b*c.dist2()-c*b.dist2()).perp()/b.cross(c)/2;
 }
+
+
+// leon || uses complex < double >
+
+double ccRadius(pt a, pt b, pt c){
+	return abs(b-a)*abs(c-b)*abs(a-c)/abs(ccw(a,b,c))/2;
+}
+pt ccCenter(pt a, pt b, pt c){
+	pt p = c - a, q = b - a;
+	return A + (p*norm(q) - q*norm(p))*cross(p,q)*0.5i;
+}

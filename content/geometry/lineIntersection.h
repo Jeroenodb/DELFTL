@@ -27,7 +27,17 @@ template<class P>
 pair<int, P> lineInter(P s1, P e1, P s2, P e2) {
 	auto d = cross(e1 - s1,e2 - s2);
 	if (d == 0) // if parallel
-		return {-ccw(s1, e1, s2) == 0), P(0, 0)};
+		return {-ccw(s1, e1, s2) == 0, P(0, 0)};
 	auto p = ccw(s2,e1, e2), q = ccw(s2, e2, s1);
 	return {1, (s1 * p + e1 * q) / d};
+}
+
+
+// leon
+
+pair<int,pt> lineInter(pt s1, pt e1, pt s2, pt e2){
+	auto d = cross(e1-s1, e2-s2);
+	if (d==0) return {-ccw(s1, e1, s2)==0, 0};
+	auto p = ccw(s2, e1, e2), q = ccw(s2, e2, s1);
+	return {1, (s1*p + e1*q)/d};
 }

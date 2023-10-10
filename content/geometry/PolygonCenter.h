@@ -18,5 +18,17 @@ P polygonCenter(const vector<P>& v) {
 		res = res + (v[i] + v[j]) * v[j].cross(v[i]);
 		A += v[j].cross(v[i]);
 	}
-	return res / A / 3;
+	return res / A / 3; 
+}
+
+
+// leon || uses complex < double >
+
+pt polygonCenter(const vector<pt>& v){
+	pt res = 0; double a = 0;
+	for (int i=0, j=v.size()-1; i<v.size(); j=i++){
+		res = res + (v[i] + v[j]) * cross(v[j], v[i]);
+		a += cross(v[j], v[i]);
+	}
+	return res/a/3;
 }

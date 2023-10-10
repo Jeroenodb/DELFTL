@@ -29,3 +29,16 @@ bool inPolygon(vector<P> &p, P a, bool strict = true) {
 	}
 	return cnt;
 }
+
+
+// leon
+
+bool inPolygon(vector<pt> &p, pt a, bool strict = true){
+	int cnt=0, n=p.size();
+	rep(i,0,n){
+		pt q = p[(i+1)%n];
+		if (onSegment(p[i], q, a)) return !strict;
+		cnt ^= ((a.y<p[i].y) - (a.y<q.y)) * ccw(a,p[i],q) > 0;
+	}
+	return cnt;
+}

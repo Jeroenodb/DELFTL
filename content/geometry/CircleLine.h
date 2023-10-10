@@ -22,3 +22,15 @@ vector<P> circleLine(P c, double r, P a, P b) {
 	P h = ab.unit() * sqrt(h2);
 	return {p - h, p + h};
 }
+
+
+// leon || uses complex < double >
+
+vector<pt> circleLine(pt c, double r, pt a, pt b){
+	pt ab = b-a, p = a + ab * in(c-a, ab) / norm(ab);
+	double s = ccw(a,b,c), h2 = r*r - s*s / norm(ab);
+	if (h2<0) return {};
+	if (h2 == 0) return {p};
+	pt h = ab/abs(ab) * sqrt(h2);
+	return {p - h, p + h};
+}

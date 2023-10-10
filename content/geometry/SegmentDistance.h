@@ -26,3 +26,11 @@ double segDist(P& s, P& e, P& p) {
 	auto d = (e-s).dist2(), t = min(d,max(.0,(p-s).dot(e-s)));
 	return ((p-s)*d-(e-s)*t).dist()/d;
 }
+
+// leon
+
+double segDist(pt s, pt e, pt p){
+	if (s==e) return sqrt(norm(p-s));
+	double d = norm(e-s), t = min(d,max(0,in(p-s,e-s)));
+	return abs(((p-s)*d-(e-s)*t))/d;
+}
