@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "complex": "cpp"
+        "complex": "cpp",
+        "vector": "cpp",
+        "xlocinfo": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp"
     }
 }
