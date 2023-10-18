@@ -31,8 +31,8 @@ bool inHull(const vector<P>& l, P p, bool strict = true) {
 	return sgn(l[a].cross(l[b], p)) < r;
 }
 
-bool inHull(const vector<P>& l, P p, bool strict = true) {
-	int a = 1, b = sz(l) - 1, r = !strict;
+bool inHull(const vector<pt>& l, pt p, bool strict = true) {
+	int a = 1, b = size(l) - 1, r = !strict;
 	if (sz(l) < 3) return r && onSegment(l[0], l.back(), p);
 	if (sideOf(l[0], l[a], l[b]) > 0) swap(a, b);
 	if (sideOf(l[0], l[a], p) >= r || sideOf(l[0], l[b], p)<= -r)
