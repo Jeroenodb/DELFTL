@@ -22,6 +22,7 @@ Products of three coordinates are used in intermediate steps so watch out for ov
 #pragma once
 
 #include "Point.h"
+#include "geoBoilerPlate.h"
 #include "OnSegment.h"
 
 template<class P> vector<P> segInter(P a, P b, P c, P d) {
@@ -38,7 +39,7 @@ template<class P> vector<P> segInter(P a, P b, P c, P d) {
 	return {all(s)};
 }
 
-// leon
+// leon || uses complex<double>
 
 vector<pt> segInter(pt a, pt b, pt c, pt d){
 	auto oa = ccw(c,d,a), ob = ccw(c,d,b), 

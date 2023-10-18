@@ -6,8 +6,10 @@
  * Description: Geometry boilerplate code using the inbuilt complex type. For easier geometry problems
  * Status: Used, works well
  */
+#pragma once
+
 typedef ll G; // Change if needed!
-typedef int PT; // Change if needed!
+typedef double PT; // Change if needed!
 typedef complex<PT> pt; 
 #define X real()
 #define Y imag()
