@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "complex": "cpp",
+        "vector": "cpp",
+        "xlocinfo": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "iostream": "cpp"
+    }
+}
