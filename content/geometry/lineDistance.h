@@ -15,6 +15,7 @@ Returns the signed distance between point p and the line containing points a and
 #pragma once
 
 #include "Point.h"
+#include "geoBoilerPlate.h"
 
 template<class P>
 double lineDist(const P& a, const P& b, const P& p) {
@@ -24,6 +25,6 @@ double lineDist(const P& a, const P& b, const P& p) {
 
 // leon
 
-double lineDist(pt a, pt b, pt c){
-	return cross(b-a,p-a)/abs(b-a);
+double lineDist(pt a, pt b, pt p){
+	return ccw(a,b,p)/sqrt(norm(b-a));
 }

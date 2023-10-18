@@ -9,10 +9,11 @@ typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vi> vvi;
 
-#include "../../content/geometry/OnSegment.h"
+#include "../../content/geometry/lineDistance.h"
 
 
 int main(){
+
     typedef Point<int> P;
     for (int i=0; i<10000000; ++i){
         int a = rand()%100-50;
@@ -22,7 +23,10 @@ int main(){
         int b2 = rand()%100-50;
         int c2 = rand()%100-50;
 
-        assert(onSegment(pt {a,a2}, pt {b,b2}, pt {c,c2}) == onSegment(P(a,a2), P(b,b2), P(c,c2)));
+        if ((a==b && a2==b2)) continue;
+
+        // cout <<setprecision(15) <<  i << ' ' << lineDist(pt {a,a2}, pt {b,b2}, pt {c,c2}) << ' ' << lineDist(P(a,a2), P(b,b2), P(c,c2)) << '\n';
+        assert(abs( lineDist(pt {a,a2}, pt {b,b2}, pt {c,c2}) - lineDist(P(a,a2), P(b,b2), P(c,c2)) ) < 1e-9);
     }
     cout << "tests passed!\n";
 }
