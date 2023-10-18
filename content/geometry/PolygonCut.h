@@ -13,13 +13,15 @@
 \vspace{-6mm}
 \end{minipage}
  * Usage:
- * 	vector<P> p = ...;
- * 	p = polygonCut(p, P(0,0), P(1,0));
+ * 	vector<pt> p = ...;
+ * 	p = polygonCut(p, pt{0,0}, pt{1,0});
+ *  Use doubles
  * Status: tested but not extensively
  */
 #pragma once
 
 #include "Point.h"
+#include "geoBoilerplate.h"
 #include "lineIntersection.h"
 
 typedef Point<double> P;
@@ -29,6 +31,22 @@ vector<P> polygonCut(const vector<P>& poly, P s, P e) {
 		P cur = poly[i], prev = i ? poly[i-1] : poly.back();
 		bool side = s.cross(e, cur) < 0;
 		if (side != (s.cross(e, prev) < 0))
+			res.push_back(lineInter(s, e, cur, prev).second);
+		if (side)
+			res.push_back(cur);
+	}
+	return res;
+}
+
+// jeroen
+
+typedef complex<double> pt;
+vector<pt> polygonCut(const vector<pt>& poly, pt s, pt e) {
+	vector<pt> res;
+	rep(i,0,poly.size()) {
+		pt cur = poly[i], prev = i ? poly[i-1] : poly.back();
+		bool side = ccw(s,e, cur) < 0;
+		if (side != (ccw(s,e, prev) < 0))
 			res.push_back(lineInter(s, e, cur, prev).second);
 		if (side)
 			res.push_back(cur);
