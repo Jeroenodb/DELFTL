@@ -47,7 +47,7 @@ vector<pt> segInter(pt a, pt b, pt c, pt d){
 	// checks if intersection is single non-endpoint point
 	if (sgn(oa) * sgn(ob) < 0 && sgn(oc) * sgn(od) <0)
 		return {(a*ob - b*oa)/(ob - oa)};
-	set<pt> s;
+	set<pt,PtCmp> s;
 	if (onSegment(c,d,a)) s.insert(a);
 	if (onSegment(c,d,b)) s.insert(b);
 	if (onSegment(a,b,c)) s.insert(c);
