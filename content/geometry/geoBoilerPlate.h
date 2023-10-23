@@ -8,7 +8,7 @@
  */
 #pragma once
 
-typedef ll G; // Change if needed!
+typedef double G; // Change if needed!
 typedef double PT; // Change if needed!
 typedef complex<PT> pt; 
 #define X real()
