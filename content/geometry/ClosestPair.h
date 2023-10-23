@@ -10,6 +10,7 @@
 #pragma once
 
 #include "Point.h"
+#include "geoBoilerPlate.h"
 
 typedef Point<ll> P;
 pair<P, P> closest(vector<P> v) {
@@ -28,3 +29,23 @@ pair<P, P> closest(vector<P> v) {
 	}
 	return ret.second;
 }
+
+
+
+pair<pt, pt> closest(vector<pt> v) {
+	assert(sz(v) > 1);
+	set<pt,PtCmp> S;
+	sort(all(v), [](pt a, pt b) { return a.y < b.y; });
+	pair<ll, pair<pt, pt>> ret{LLONG_MAX, {pt(), pt()}};
+	int j = 0;
+	for (pt p : v) {
+		pt d{1 + (ll)sqrt(ret.first), 0};
+		while (v[j].y <= p.y - d.x) S.erase(v[j++]);
+		auto lo = S.lower_bound(p - d), hi = S.upper_bound(p + d);
+		for (; lo != hi; ++lo)
+			ret = min(ret, {(*lo - p).norm(), {*lo, p}});
+		S.insert(p);
+	}
+	return ret.second;
+}
+
