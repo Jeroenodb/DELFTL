@@ -3,26 +3,13 @@
  * Date: 2009-04-08
  * License: CC0
  * Source:
- * Description: Returns the center of mass for a polygon.
+ * Description: Returns the center of mass for a polygon. Use complex< double >
  * Time: O(n)
  * Status: Tested
  */
 #pragma once
 
-#include "Point.h"
-
-typedef Point<double> P;
-P polygonCenter(const vector<P>& v) {
-	P res(0, 0); double A = 0;
-	for (int i = 0, j = sz(v) - 1; i < sz(v); j = i++) {
-		res = res + (v[i] + v[j]) * v[j].cross(v[i]);
-		A += v[j].cross(v[i]);
-	}
-	return res / A / 3; 
-}
-
-
-// leon || uses complex < double >
+#include "GeoBoilerplate.h"
 
 pt polygonCenter(const vector<pt>& v){
 	pt res = 0; double a = 0;
@@ -30,5 +17,5 @@ pt polygonCenter(const vector<pt>& v){
 		res = res + (v[i] + v[j]) * cross(v[j], v[i]);
 		a += cross(v[j], v[i]);
 	}
-	return res/a/3;
+	return res/a/3.;
 }

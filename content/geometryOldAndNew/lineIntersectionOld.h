@@ -21,7 +21,20 @@ Products of three coordinates are used in intermediate steps so watch out for ov
  */
 #pragma once
 
+#include "Point.h"
 #include "GeoBoilerplate.h"
+
+template<class P>
+pair<int, P> lineInter(P s1, P e1, P s2, P e2) {
+	auto d = (e1 - s1).cross(e2 - s2);
+	if (d == 0) // if parallel
+		return {-(s1.cross(e1, s2) == 0), P(0, 0)};
+	auto p = s2.cross(e1, e2), q = s2.cross(e2, s1);
+	return {1, (s1 * p + e1 * q) / d};
+}
+
+
+// leon || use complex<double>
 
 pair<int,pt> lineInter(pt s1, pt e1, pt s2, pt e2){
 	auto d = cross(e1-s1, e2-s2);

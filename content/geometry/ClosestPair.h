@@ -9,41 +9,20 @@
  */
 #pragma once
 
-#include "Point.h"
-#include "geoBoilerPlate.h"
-
-typedef Point<ll> P;
-pair<P, P> closest(vector<P> v) {
-	assert(sz(v) > 1);
-	set<P> S;
-	sort(all(v), [](P a, P b) { return a.y < b.y; });
-	pair<ll, pair<P, P>> ret{LLONG_MAX, {P(), P()}};
-	int j = 0;
-	for (P p : v) {
-		P d{1 + (ll)sqrt(ret.first), 0};
-		while (v[j].y <= p.y - d.x) S.erase(v[j++]);
-		auto lo = S.lower_bound(p - d), hi = S.upper_bound(p + d);
-		for (; lo != hi; ++lo)
-			ret = min(ret, {(*lo - p).dist2(), {*lo, p}});
-		S.insert(p);
-	}
-	return ret.second;
-}
-
-
+#include "GeoBoilerplate.h"
 
 pair<pt, pt> closest(vector<pt> v) {
 	assert(sz(v) > 1);
 	set<pt,PtCmp> S;
-	sort(all(v), [](pt a, pt b) { return a.y < b.y; });
+	sort(all(v), [](pt a, pt b) { return a.Y < b.Y; });
 	pair<ll, pair<pt, pt>> ret{LLONG_MAX, {pt(), pt()}};
 	int j = 0;
 	for (pt p : v) {
 		pt d{1 + (ll)sqrt(ret.first), 0};
-		while (v[j].y <= p.y - d.x) S.erase(v[j++]);
+		while (v[j].Y <= p.Y - d.X) S.erase(v[j++]);
 		auto lo = S.lower_bound(p - d), hi = S.upper_bound(p + d);
 		for (; lo != hi; ++lo)
-			ret = min(ret, {(*lo - p).norm(), {*lo, p}});
+			ret = min(ret, {norm(*lo - p), {*lo, p}});
 		S.insert(p);
 	}
 	return ret.second;

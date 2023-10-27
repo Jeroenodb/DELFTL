@@ -3,11 +3,10 @@
  * Date: 2021-10-23
  * License: CC0
  * Source: me
- * Description: Geometry boilerplate code using the inbuilt complex type. 
+ * Description: Geometry boilerplate code using the inbuilt complex type. For easier geometry problems
  * Status: Used, works well
  */
 #pragma once
-#include "../contest/template.h"
 
 typedef double G; // Change if needed!
 typedef double PT; // Change if needed!

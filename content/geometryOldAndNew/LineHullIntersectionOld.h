@@ -18,11 +18,53 @@
  * Status: stress-tested
  */
 #pragma once
+
+#include "Point.h"
 #include "GeoBoilerplate.h"
+
+#define cmpOld(i,j) sgn(dir.perp().cross(poly[(i)%n]-poly[(j)%n]))
+#define extrOld(i) cmpOld(i + 1, i) >= 0 && cmpOld(i, i - 1 + n) < 0
+template <class P> int extrVertex(vector<P>& poly, P dir) {
+	int n = sz(poly), lo = 0, hi = n;
+	if (extrOld(0)) return 0;
+	while (lo + 1 < hi) {
+		int m = (lo + hi) / 2;
+		if (extrOld(m)) return m;
+		int ls = cmpOld(lo + 1, lo), ms = cmpOld(m + 1, m);
+		(ls < ms || (ls == ms && ls == cmpOld(lo, m)) ? hi : lo) = m;
+	}
+	return lo;
+}
+
+#define cmpLOld(i) sgn(a.cross(poly[i], b))
+template <class P>
+array<int, 2> lineHull(P a, P b, vector<P>& poly) {
+	int endA = extrVertex(poly, (a - b).perp());
+	int endB = extrVertex(poly, (b - a).perp());
+	if (cmpLOld(endA) < 0 || cmpLOld(endB) > 0)
+		return {-1, -1};
+	array<int, 2> res;
+	rep(i,0,2) {
+		int lo = endB, hi = endA, n = sz(poly);
+		while ((lo + 1) % n != hi) {
+			int m = ((lo + hi + (lo < hi ? 0 : n)) / 2) % n;
+			(cmpLOld(m) == cmpLOld(endB) ? lo : hi) = m;
+		}
+		res[i] = (lo + !cmpLOld(hi)) % n;
+		swap(endA, endB);
+	}
+	if (res[0] == res[1]) return {res[0], -1};
+	if (!cmpLOld(res[0]) && !cmpLOld(res[1]))
+		switch ((res[0] - res[1] + sz(poly) + 1) % sz(poly)) {
+			case 0: return {res[0], res[0]};
+			case 2: return {res[1], res[1]};
+		}
+	return res;
+}
 
 #define cmp(i,j) sgn(cross( dir*pt{0,1},poly[(i)%n]-poly[(j)%n]))
 #define extr(i) cmp(i + 1, i) >= 0 && cmp(i, i - 1 + n) < 0
-int extrVertex(vector<pt>& poly, pt dir) {
+template <class P> int extrVertex(vector<P>& poly, P dir) {
 	int n = sz(poly), lo = 0, hi = n;
 	if (extr(0)) return 0;
 	while (lo + 1 < hi) {
@@ -35,10 +77,10 @@ int extrVertex(vector<pt>& poly, pt dir) {
 }
 
 #define cmpL(i) sgn(ccw(a,poly[i], b))
-
-array<int, 2> lineHull(pt a, pt b, vector<pt>& poly) {
-	int endA = extrVertex(poly, (a - b)*pt{0,1});
-	int endB = extrVertex(poly, (b - a)*pt{0,1});
+template <class P>
+array<int, 2> lineHull(P a, P b, vector<P>& poly) {
+	int endA = extrVertex(poly, (a - b).perp());
+	int endB = extrVertex(poly, (b - a).perp());
 	if (cmpL(endA) < 0 || cmpL(endB) > 0)
 		return {-1, -1};
 	array<int, 2> res;
