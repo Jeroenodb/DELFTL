@@ -20,7 +20,8 @@ The circumcirle of a triangle is the circle intersecting all three vertices. ccR
 double ccRadius(pt a, pt b, pt c){
 	return abs(b-a)*abs(c-b)*abs(a-c)/abs(ccw(a,b,c))/2;
 }
+
 pt ccCenter(pt a, pt b, pt c){
 	pt p = c - a, q = b - a;
-	return a + (p*norm(q) - q*norm(p))*cross(p,q)*0.5i;
+	return a + (p*norm(q) - q*norm(p))*pt{0,0.5L}/cross(p,q);
 }
