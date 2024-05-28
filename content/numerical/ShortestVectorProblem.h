@@ -17,9 +17,9 @@ typedef vector<ll> vl;
 typedef vector<vl> vvl;
 
 auto inp(vl& v, vl& w){
-    double ans = 0;
-    rep(i,0,sz(v)) ans += (double) v[i]*w[i];
-    return ans;
+    double s = 0;
+    rep(i,0,sz(v)) s += (double) v[i]*w[i];
+    return s;
 }
 ll mu(vl& v, vl& w){ 
     return llround(inp(v,w)/inp(w,w));
