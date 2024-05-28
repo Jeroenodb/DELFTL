@@ -16,7 +16,7 @@
 typedef vector<ll> vl;
 typedef vector<vl> vvl;
 
-double inp(vl& v, vl& w){
+auto inp(vl& v, vl& w){
     double ans = 0;
     rep(i,0,sz(v)) ans += (double) v[i]*w[i];
     return ans;
@@ -39,7 +39,7 @@ vvl Gauss(vvl M, ll U = 1e7){
             for (vl& w : M) sub(v,w,rnd(-U,U));
         } else v = q.back(), q.pop_back();
         i = 0;
-        double l = inp(v,v);
+        auto l = inp(v,v);
         for (vl& w : T) {
             sub(v,w,mu(v,w));
             if (inp(v,v)<.5) goto B;
