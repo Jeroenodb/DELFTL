@@ -33,7 +33,7 @@ ll rnd(ll a, ll b){
     return dist(gen);
 }
 
-vvl Gauss(vvl M, double U = 1e7){
+vvl Gauss(vvl M, ll U = 1e7){
     int n = sz(M), s = pow(1.16,n)*4 + 20,i;
     vvl T,q;
     while(s){
