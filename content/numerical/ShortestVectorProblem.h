@@ -4,9 +4,10 @@
  * License: MIT
  * Description: Creates short vectors that contain the shortest vector with high probability
  * Usage: handles vectors with values $<$ $10^9$. For larger lattices use __int128 instead of ll.
+ * Make sure that $\ln(U) = \Theta(\ln(R))$, where $R$ is the size of the largest vector in M, and that $nUR < 10^18$
  * vvl M = {{1,1,1}, {2,1,2}, {3,5,6}};
- * vvl ans = Gauss(M, 10); // in this case, 10 was chosen as an upper bound on vectors in M;
- * Time: O(\left(\frac{4}{3}\right)^n * m * log(U)), where $n$ is the number of independent vectors, $m$ is the vector size and U is the an upper bound on the coordinates.
+ * vvl ans = Gauss(M, 10); // in this case, U=10 was chosen;
+ * Time: O(\left(\frac{4}{3}\right)^n * m * log(U)), where $n$ is the number of independent vectors, $m$ is the vector size and $\ln(U) = \Theta(\ln(R))$ for $R$ the largest vector in $M$.
  * Status: seems to work?
  */
 #pragma once
