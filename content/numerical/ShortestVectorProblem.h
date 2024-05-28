@@ -34,7 +34,7 @@ ll rnd(ll a, ll b){
 }
 
 vvl Gauss(vvl M, ll U = 1e7){
-    int n = sz(M), s = pow(1.16,n)*4 + 20,i;
+    ll s = pow(1.16,sz(M))*4 + 20,i,m;
     vvl T,q;
     while(s){
         vl v;
@@ -49,7 +49,7 @@ vvl Gauss(vvl M, ll U = 1e7){
             if (inp(v,v)<.5) goto B;
         }
         while (i<sz(T)){
-            ll m = mu(T[i],v);
+            m = mu(T[i],v);
             if (m) sub(T[i],v,m), q.push_back(T[i]), T[i]=T.back(), T.pop_back();
             i++;
         }
