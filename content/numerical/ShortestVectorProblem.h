@@ -29,7 +29,7 @@ void sub(vl& v, vl& w, ll c){
 }
 
 vvl Gauss(vvl M, ll U = 1e7){
-    ll s = pow(1.16,sz(M))*4 + 20,i,m;
+    ll n = sz(M), s = pow(1.16,n)*4 + 20,i,m;
     vvl T,q;
     while(s){
         vl v;
