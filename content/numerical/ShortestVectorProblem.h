@@ -11,6 +11,7 @@
  * Status: seems to work?
  */
 #pragma once
+#include "rng.h"
 
 typedef vector<ll> vl;
 typedef vector<vl> vvl;
@@ -25,12 +26,6 @@ ll mu(vl& v, vl& w){
 }
 void sub(vl& v, vl& w, ll c){
     rep(i,0,sz(v)) v[i] -= c*w[i];
-}
-
-mt19937 gen(69);
-ll rnd(ll a, ll b){
-    uniform_int_distribution dist(a,b);
-    return dist(gen);
 }
 
 vvl Gauss(vvl M, ll U = 1e7){
