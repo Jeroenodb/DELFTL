@@ -4,7 +4,7 @@
  * License: MIT
  * Description: Creates short vectors that contain the shortest vector with high probability
  * Usage: handles vectors with values $<$ $10^9$. For larger lattices use __int128 instead of ll.
- * Make sure that $\ln(U) = \Theta(\ln(R))$, where $R$ is the size of the largest vector in M, and that $nUR < 10^18$.
+ * Let $U = o(R)$, where $R$ is the size of the largest vector in M, and make sure that $nUR \leq 10^18$. For too small values of $U$ the algorithm may fail.
  * vvl M = {{1,1,1}, {2,1,2}, {3,5,6}};
  * vvl ans = Gauss(M, 10); // in this case, U=10 was chosen;
  * Time: O(\left(\frac{4}{3}\right)^n * m * log(R)), where $n$ is the dimension of the lattice, $m$ is the vector size and $R$ is the length of the largest vector in $M$.
