@@ -29,7 +29,8 @@ void sub(vl& v, vl& w, ll c){
 }
 
 vvl Gauss(vvl M, ll U = 1e7){
-    ll n = sz(M), s = pow(1.16,n)*4 + 20,i,m;
+    // n is at least the rank of M. Update n manually for many dependent vectors
+    ll n = sz(M), s = pow(1.16,n)*4 + 20,i,m; 
     vvl T,q;
     while(s){
         vl v;
