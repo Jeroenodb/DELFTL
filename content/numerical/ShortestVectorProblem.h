@@ -5,8 +5,8 @@
  * Description: Creates short vectors that contain the shortest vector with high probability
  * Usage: handles vectors with values $<$ $10^9$. For larger lattices use __int128 instead of ll.
  * vvl M = {{1,1,1}, {2,1,2}, {3,5,6}};
- * vvl ans = Gauss(M);
- * Time: O(\left(\frac{4}{3}\right)^n * m * log(U)), where $n$ is the number of independent vectors, $m$ is the vector size and U is the word size.
+ * vvl ans = Gauss(M, 10); // in this case, 10 was chosen as an upper bound on vectors in M;
+ * Time: O(\left(\frac{4}{3}\right)^n * m * log(U)), where $n$ is the number of independent vectors, $m$ is the vector size and U is the an upper bound on the coordinates.
  * Status: seems to work?
  */
 #pragma once
@@ -32,14 +32,14 @@ ll rnd(ll a, ll b){
     return dist(gen);
 }
 
-vvl Gauss(vvl M){
+vvl Gauss(vvl M, double U = 1e7){
     int n = sz(M), s = pow(1.16,n)*4 + 20,i;
     vvl T,q;
     while(s){
         vl v;
         if (sz(q)==0){
             s--, v = M[0];
-            for (vl& w : M) sub(v,w,rnd(-1e7,1e7));
+            for (vl& w : M) sub(v,w,rnd(-U,U));
         } else v = q.back(), q.pop_back();
         i = 0;
         double l = inp(v,v);
