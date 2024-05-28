@@ -3,6 +3,7 @@
  * Date: 2023-10-10
  * Description: Approximates the state of the differential equation $\frac{\mathrm{d}x}{\mathrm{d}t} = df(t,x)$ at time $t+\varepsilon$, with error margin $O(\varepsilon^4)$.
  */
+#pragma once
 
 template<typename T>
 T rk4(double t, T x, double dt, T df(double,T)){

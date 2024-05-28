@@ -9,6 +9,7 @@
  * Time: O(\left(\frac{4}{3}\right)^n * m * log(U)), where $n$ is the number of independent vectors, $m$ is the vector size and U is the word size.
  * Status: seems to work?
  */
+#pragma once
 
 typedef vector<ll> vl;
 typedef vector<vl> vvl;
