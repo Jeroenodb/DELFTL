@@ -8,4 +8,4 @@
  * Status: Used, works well
  */
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-template<class I> I rnd(I l,I r){return std::uniform_int_distribution<I>(l,r)(rng);
+template<class I> I rnd(I l,I r){return std::uniform_int_distribution<I>(l,r)(rng);}
