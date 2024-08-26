@@ -10,4 +10,4 @@ import time
 from os import system
 while True: 
     time.sleep(3600)
-    system('notify-send "Hourly Reminder" "It has been an hour!"')
+    system('notify-send "Hourly Reminder" "It has been an hour!" -u critical')
