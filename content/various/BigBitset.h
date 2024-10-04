@@ -9,11 +9,11 @@
  */
 #pragma once
 
-#include <string>
-#include <bits/functexcept.h>
-#include <iosfwd>
-#include <bits/cxxabi_forced.h>
-#include <bits/functional_hash.h>
+#import <string>
+#import <bits/functexcept.h>
+#import <iosfwd>
+#import <bits/cxxabi_forced.h>
+#import <bits/functional_hash.h>
 
 #pragma push_macro("__SIZEOF_LONG__")
 #pragma push_macro("__cplusplus")
@@ -24,7 +24,7 @@
 #define __builtin_popcountl __builtin_popcountll
 #define __builtin_ctzl __builtin_ctzll
 
-#include <bitset>
+#import <bitset>
 
 #pragma pop_macro("__cplusplus")
 #pragma pop_macro("__SIZEOF_LONG__")
