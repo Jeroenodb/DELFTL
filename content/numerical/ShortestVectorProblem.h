@@ -2,11 +2,11 @@
  * Author: Leon van der Waal
  * Source: Micciancio and Voulgaris (2010)
  * License: MIT
- * Description: Creates short vectors that contain the shortest vector with high probability
- * Usage: Let $U = o(R)$, where $R$ is the size of the largest vector in M, and make sure that $UR\#M$ \leq 10^18$. For too small values of $U$ the algorithm may fail.
- * vvl M = {{1,1,1}, {2,1,2}, {3,5,6}};
+ * Description: Creates short vectors that contain the shortest vector with high probability.
+ * Let $U = o(R)$, where $R$ is the size of the largest vector in $M$, and make sure that $UR \approx M \leq 10^{18}$. For too small values of $U$ the algorithm may fail.
+ * Usage: vvl M = {{1,1,1}, {2,1,2}, {3,5,6}};
  * vvl ans = Gauss(M, 10); // in this case, U=10 was chosen;
- * Time: $O(\left(\frac{4}{3}\right)^n * m * log(R))$, where $n$ is the dimension of the lattice, $m$ is the vector size and $R$ is the length of the largest vector in $M$.
+ * Time: $O(\left(\frac{4}{3}\right)^n \cdot m \cdot \log(R))$, where $n$ is the dimension of the lattice, $m$ is the vector size and $R$ is the length of the largest vector in $M$.
  * Status: seems to work?
  */
 #pragma once
