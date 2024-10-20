@@ -13,26 +13,11 @@
  *  \end{itemize*}
  *  In the last case, if a corner $i$ is crossed, this is treated as happening on side $(i, i+1)$.
  *  The points are returned in the same order as the line hits the polygon.
- * \texttt{extrVertex} returns the point of a hull with the max projection onto a line.
  * Time: O(\log n)
  * Status: stress-tested
  */
 #pragma once
-#include "GeoBoilerplate.h"
-
-#define cmp(i,j) sgn(cross( dir*pt{0,1},poly[(i)%n]-poly[(j)%n]))
-#define extr(i) cmp(i + 1, i) >= 0 && cmp(i, i - 1 + n) < 0
-int extrVertex(vector<pt>& poly, pt dir) {
-	int n = sz(poly), lo = 0, hi = n;
-	if (extr(0)) return 0;
-	while (lo + 1 < hi) {
-		int m = (lo + hi) / 2;
-		if (extr(m)) return m;
-		int ls = cmp(lo + 1, lo), ms = cmp(m + 1, m);
-		(ls < ms || (ls == ms && ls == cmp(lo, m)) ? hi : lo) = m;
-	}
-	return lo;
-}
+#include "ExtremeVertex.h"
 
 #define cmpL(i) sgn(ccw(a,poly[i], b))
 
