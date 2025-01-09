@@ -7,8 +7,8 @@
  * BSP problem(2);
  * problem.addClause({0,~1});
  * bool possible = problem.solve();
- * Time: O(N \max(w_i))
- * Status: Tested on kattis:eavesdropperevasion, stress-tested
+ * Time: didnt time yet
+ * Status: somewhat untested
  */
 #pragma once
 
