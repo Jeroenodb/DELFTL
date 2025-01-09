@@ -21,7 +21,7 @@ pair<pt,double> mec(vector<pt> ps){
 		rep(j,0,i) if (abs(o-ps[j]) > r*EPS){
 			o = (ps[i] + ps[j])/2.;
 			r = abs(o-ps[i]);
-			rep(k,0,j) if (abs(o-ps[i]) > r*EPS){
+			rep(k,0,j) if (abs(o-ps[k]) > r*EPS){
 				o = ccCenter(ps[i], ps[j], ps[k]);
 				r = abs(o-ps[i]);
 			}

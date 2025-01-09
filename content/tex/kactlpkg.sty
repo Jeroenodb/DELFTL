@@ -5,7 +5,19 @@
 \usepackage[utf8]{inputenc}             % Encoding UTF-8
 \usepackage{listings}                   % Source code listings
 \usepackage{framed}                     % Source code listings
-\usepackage[a4paper,landscape,hmargin={0.5cm,0.5cm},vmargin={1.0cm,0.4cm}]{geometry}
+% Set initial geometry settings (can be default settings for both)
+\usepackage{geometry}
+\usepackage{ifthen}
+\usepackage{everypage}
+\geometry{a4paper, landscape, hmargin={0.4cm,0.4cm}, vmargin={1.0cm,0.5cm}}
+
+% Conditional setup for different margins based on page parity
+\usepackage{changepage}
+\usepackage{bophook}
+\AtBeginPage{%
+  \ifodd\count0 \global\voffset=0mm \else \global\voffset=4.5mm \fi
+}
+
 \usepackage{multicol}                   % Split page in multiple columns
 \usepackage{fancyhdr}                   % Fancy headers
 \usepackage{amsbsy, amssymb, amsmath}   % Enable math symbols
@@ -218,6 +230,7 @@
 \newcommand{\maketeampage}{
 	\pagestyle{empty}
 	\setcounter{page}{0}
+
 	\begin{center}
 		\strut % Magic
 		\vspace{3cm}\\
