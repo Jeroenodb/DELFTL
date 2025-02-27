@@ -30,17 +30,11 @@
  * significantly.
  *
  * Subtle implementation notes:
-<<<<<<< HEAD
- * - we operate on residues in [1, n]; modmul can be proven to work for those
-=======
->>>>>>> kactl/main
  * - prd starts off as 2 to handle the case n = 4; it's harmless for other n
  *   since we're guaranteed that n > 2. (Pollard rho has problems with prime
  *   powers in general, but all larger ones happen to work.)
  * - t starts off as 30 to make the first gcd check come earlier, as an
  *   optimization for small numbers.
-<<<<<<< HEAD
-=======
  * - we vary f between restarts because the cycle finding algorithm does not
  *   find the first element in the cycle but rather one at distance k*|cycle|
  *   from the start, and that can result in continual failures if all cycles
@@ -51,7 +45,6 @@
  *   enough i. (With reference to the proof in modmul-proof.tex, the argument
  *   for "S is in [-c, 2c)" goes through unchanged, while S < 2^63 now follows
  *   from S < 2c and S = x^2 (mod c) together implying S < c + i^2.)
->>>>>>> kactl/main
  */
 #pragma once
 
@@ -59,13 +52,8 @@
 #include "MillerRabin.h"
 
 ull pollard(ull n) {
-<<<<<<< HEAD
-	auto f = [n](ull x) { return modmul(x, x, n) + 1; };
-	ull x = 0, y = 0, t = 30, prd = 2, i = 1, q;
-=======
 	ull x = 0, y = 0, t = 30, prd = 2, i = 1, q;
 	auto f = [&](ull x) { return modmul(x, x, n) + i; };
->>>>>>> kactl/main
 	while (t++ % 40 || __gcd(prd, n) == 1) {
 		if (x == y) x = ++i, y = f(x);
 		if ((q = modmul(prd, max(x,y) - min(x,y), n))) prd = q;
