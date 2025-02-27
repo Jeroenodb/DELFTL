@@ -59,8 +59,8 @@
 \contentsline {section}{\numberline {6.4}Fractions}{12}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Pythagorean Triples}{12}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Primes}{12}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Estimates}{12}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Mobius Function}{12}{section.6.8}%
+\contentsline {section}{\numberline {6.7}Estimates}{13}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Mobius Function}{13}{section.6.8}%
 \contentsline {chapter}{\numberline {7}Graph}{13}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Network flow}{13}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Matching}{14}{section.7.2}%
@@ -85,6 +85,6 @@
 \contentsline {section}{\numberline {10.4}Debugging tricks}{24}{section.10.4}%
 \contentsline {section}{\numberline {10.5}Optimization tricks}{24}{section.10.5}%
 \contentsline {subsection}{\numberline {10.5.1}Bit hacks}{24}{subsection.10.5.1}%
-\contentsline {subsection}{\numberline {10.5.2}Pragmas}{24}{subsection.10.5.2}%
+\contentsline {subsection}{\numberline {10.5.2}Pragmas}{25}{subsection.10.5.2}%
 \contentsline {chapter}{\numberline {11}Techniques}{25}{chapter.11}%
 \contentsfinish 
