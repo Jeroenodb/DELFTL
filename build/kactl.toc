@@ -51,40 +51,40 @@
 \contentsline {section}{\numberline {5.4}Fourier transforms}{9}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Power Series}{10}{section.5.5}%
 \contentsline {section}{\numberline {5.6}Newton's Method}{10}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Number theory}{10}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Number theory}{11}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Modular arithmetic}{11}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Primality}{12}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Divisibility}{12}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Bézout's identity}{12}{subsection.6.3.1}%
 \contentsline {section}{\numberline {6.4}Fractions}{12}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Pythagorean Triples}{12}{section.6.5}%
+\contentsline {section}{\numberline {6.5}Pythagorean Triples}{13}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Primes}{13}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Estimates}{13}{section.6.7}%
 \contentsline {section}{\numberline {6.8}Mobius Function}{13}{section.6.8}%
 \contentsline {chapter}{\numberline {7}Graph}{13}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Network flow}{13}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Matching}{14}{section.7.2}%
+\contentsline {section}{\numberline {7.2}Matching}{15}{section.7.2}%
 \contentsline {section}{\numberline {7.3}DFS algorithms}{15}{section.7.3}%
 \contentsline {section}{\numberline {7.4}Coloring}{16}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Heuristics}{16}{section.7.5}%
+\contentsline {section}{\numberline {7.5}Heuristics}{17}{section.7.5}%
 \contentsline {section}{\numberline {7.6}Trees}{17}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Math}{18}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Number of Spanning Trees}{18}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Erdős–Gallai theorem}{18}{subsection.7.7.2}%
-\contentsline {chapter}{\numberline {8}Geometry}{18}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Geometric primitives}{18}{section.8.1}%
+\contentsline {section}{\numberline {7.7}Math}{19}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Number of Spanning Trees}{19}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Erdős–Gallai theorem}{19}{subsection.7.7.2}%
+\contentsline {chapter}{\numberline {8}Geometry}{19}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Geometric primitives}{19}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Circles}{19}{section.8.2}%
 \contentsline {section}{\numberline {8.3}Polygons}{20}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Misc. Point Set Problems}{20}{section.8.4}%
+\contentsline {section}{\numberline {8.4}Misc. Point Set Problems}{21}{section.8.4}%
 \contentsline {section}{\numberline {8.5}3D}{21}{section.8.5}%
-\contentsline {chapter}{\numberline {9}Strings}{21}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Strings}{22}{chapter.9}%
 \contentsline {chapter}{\numberline {10}Various}{23}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Intervals}{23}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Misc. algorithms}{23}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Dynamic programming}{24}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Debugging tricks}{24}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Optimization tricks}{24}{section.10.5}%
-\contentsline {subsection}{\numberline {10.5.1}Bit hacks}{24}{subsection.10.5.1}%
-\contentsline {subsection}{\numberline {10.5.2}Pragmas}{24}{subsection.10.5.2}%
-\contentsline {chapter}{\numberline {11}Techniques}{25}{chapter.11}%
+\contentsline {section}{\numberline {10.2}Misc. algorithms}{24}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Dynamic programming}{25}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Debugging tricks}{25}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Optimization tricks}{25}{section.10.5}%
+\contentsline {subsection}{\numberline {10.5.1}Bit hacks}{25}{subsection.10.5.1}%
+\contentsline {subsection}{\numberline {10.5.2}Pragmas}{25}{subsection.10.5.2}%
+\contentsline {chapter}{\numberline {11}Techniques}{26}{chapter.11}%
 \contentsfinish 

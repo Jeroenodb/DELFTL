@@ -5,3 +5,8 @@
 a.out
 header.tmp
 .vscode
+build/kactl.aux
+build/kactl.log
+build/kactl.pdf
+build/kactl.ptc
+build/kactl.toc
