@@ -1,7 +1,11 @@
 /**
  * Author: Simon Lindholm
  * Date: 2016-07-25
+<<<<<<< HEAD
  * Source: https://github.com/ngthanhtrung23/ACM_Notebook_new/blob/master/DataStructure/LinkCut.h
+=======
+ * Source: https://github.com/ngthanhtrung23/ACM_Notebook_new/blob/master/DataStructure/LinkCutTree.h
+>>>>>>> kactl/main
  * Description: Represents a forest of unrooted trees. You can add and remove
  * edges (as long as the result is still a forest), and check whether
  * two nodes are in the same tree.
@@ -33,9 +37,15 @@ struct Node { // Splay tree. Root's pp contains tree's parent.
 		c[i] = z->c[i ^ 1];
 		if (b < 2) {
 			x->c[h] = y->c[h ^ 1];
+<<<<<<< HEAD
 			z->c[h ^ 1] = b ? x : this;
 		}
 		y->c[i ^ 1] = b ? this : x;
+=======
+			y->c[h ^ 1] = x;
+		}
+		z->c[i ^ 1] = this;
+>>>>>>> kactl/main
 		fix(); x->fix(); y->fix();
 		if (p) p->fix();
 		swap(pp, y->pp);

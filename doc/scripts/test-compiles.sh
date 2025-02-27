@@ -4,4 +4,8 @@ echo "
 #include \"../content/contest/template.cpp\"
 #include \"../$FILE\"
 " >build/temp.cpp
+<<<<<<< HEAD
 g++ -Wall -Wextra -Wfatal-errors -Wconversion -std=c++14 build/temp.cpp && rm a.out build/temp.cpp
+=======
+g++ -Wall -Wextra -Wfatal-errors -Wconversion -std=c++17 build/temp.cpp && rm a.out build/temp.cpp
+>>>>>>> kactl/main

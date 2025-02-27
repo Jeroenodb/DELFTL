@@ -42,12 +42,22 @@ void ntt(vl &a) {
 }
 vl conv(const vl &a, const vl &b) {
 	if (a.empty() || b.empty()) return {};
+<<<<<<< HEAD
 	int s = sz(a) + sz(b) - 1, B = 32 - __builtin_clz(s), n = 1 << B;
+=======
+	int s = sz(a) + sz(b) - 1, B = 32 - __builtin_clz(s),
+	    n = 1 << B;
+>>>>>>> kactl/main
 	int inv = modpow(n, mod - 2);
 	vl L(a), R(b), out(n);
 	L.resize(n), R.resize(n);
 	ntt(L), ntt(R);
+<<<<<<< HEAD
 	rep(i,0,n) out[-i & (n - 1)] = (ll)L[i] * R[i] % mod * inv % mod;
+=======
+	rep(i,0,n)
+		out[-i & (n - 1)] = (ll)L[i] * R[i] % mod * inv % mod;
+>>>>>>> kactl/main
 	ntt(out);
 	return {out.begin(), out.begin() + s};
 }

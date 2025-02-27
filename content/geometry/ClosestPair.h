@@ -27,4 +27,3 @@ pair<pt, pt> closest(vector<pt> v) {
 	}
 	return ret.second;
 }
-

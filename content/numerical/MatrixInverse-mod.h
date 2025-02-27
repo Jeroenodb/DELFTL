@@ -26,7 +26,12 @@ int matInv(vector<vector<ll>>& A) {
 		return i;
 found:
 		A[i].swap(A[r]); tmp[i].swap(tmp[r]);
+<<<<<<< HEAD
 		rep(j,0,n) swap(A[j][i], A[j][c]), swap(tmp[j][i], tmp[j][c]);
+=======
+		rep(j,0,n)
+			swap(A[j][i], A[j][c]), swap(tmp[j][i], tmp[j][c]);
+>>>>>>> kactl/main
 		swap(col[i], col[c]);
 		ll v = modpow(A[i][i], mod - 2);
 		rep(j,i+1,n) {
@@ -46,6 +51,10 @@ found:
 	}
 
 	rep(i,0,n) rep(j,0,n)
+<<<<<<< HEAD
 		A[col[i]][col[j]] = tmp[i][j] % mod + (tmp[i][j] < 0 ? mod : 0);
+=======
+		A[col[i]][col[j]] = tmp[i][j] % mod + (tmp[i][j] < 0)*mod;
+>>>>>>> kactl/main
 	return n;
 }
