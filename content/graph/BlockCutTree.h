@@ -5,9 +5,9 @@
  * Source: folklore
  * Description: Finds the biconnected components (blocks) and the cut vertices,
  *  builds a tree on the blocks and cut vertices. 
- *  tree(n+#blocks) forms the tree (0...n-1 for cut vertices, rest for bicon), some adjacency lists are empty.
- *  bie(#blocks) gives the edge ids belonging to each block, wrt input order.
- *  biv(#blocks) non-cut vertices belonging to this block.
+ *  tree(n+\#blocks) forms the tree (0...n-1 for cut vertices, rest for bicon), some adjacency lists are empty.
+ *  bie(\#blocks) gives the edge ids belonging to each block, wrt input order.
+ *  biv(\#blocks) non-cut vertices belonging to this block.
  *  bid(n) is a block this vertex is part of.
  * Usage:
  *  vector<array<int,2>> es = {{0,1},{1,2},{0,2},{2,3}};
