@@ -2,17 +2,17 @@
  * Author: Leon van der Waal
  * Source: classic problem
  * Description: computes the vector $c_i = min_{j+k = i} (a_j + b_k)$.
- * Answers are bounded by \verb|oo|. Make sure \verb|2*oo| fits in the 
+ * Answers are bounded by \texttt{oo} . Make sure \texttt{2*oo} fits in the 
  * integer limits. If not, change to unsigned integers. Compile with 
  * optimize("O3,unroll-loops") and target("avx2,bmi")
- * Time: O(NM) \text{, arount $0.9$ seconds for $N=M=2\times 10^5$}
+ * Time: O(NM) \text{, around $0.9$ seconds for $N=M=2\times 10^5$}
  * Status: stresstested
  */
 #pragma once
 
+const int oo = 1e9;
 #include <immintrin.h>
 typedef __m256i V;
-const int oo = 1e9;
 const int N = 2e5+1e3; // >64 padding needed
 alignas(32) int A[N], B[N], C[N*2];
 

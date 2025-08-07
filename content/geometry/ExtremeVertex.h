@@ -5,7 +5,9 @@
  * Source: https://github.com/AlCash07/ACTL/blob/master/include/actl/geometry/algorithm/intersect/line_convex_polygon.hpp
  * Description: Extreme point in direction queries:
  * Returns the point of a hull with the max projection onto a line.
- * For convex hull tangents, use the line: #define cmp(i,j) sgn(cross(dir(poly[(i)%n]), dir(poly[(j)%n]))), and change dir to be a lambda function.
+ * For convex hull tangents, use the line: 
+ * \texttt{\#define cmp(i,j) sgn(cross(dir(poly[(i)\%n]), dir(poly[(j)\%n])))}, and change \texttt{dir} to be a lambda function, 
+ * returning a vector from its argument to the queried point.
  * Time: O(\log n)
  * Status: stress-tested
  */

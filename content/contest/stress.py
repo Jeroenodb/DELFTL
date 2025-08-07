@@ -13,7 +13,7 @@ import sys
 seed(int(sys.argv[1]))
 # make a small test here
 
-import os
+import os # put this in stress.py
 for i in range(10**9):
     print(f"testing {i}")
     assert(os.system(f"python3 gen.py {i} > input.in")==0)
