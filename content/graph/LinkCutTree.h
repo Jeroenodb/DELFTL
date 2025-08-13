@@ -91,6 +91,12 @@ struct LinkCut {
 	}
 	Node* access(Node* u) { /// Move u to root aux tree. Return the root of the root aux tree.
 		u->splay();
+		if(u->c[1]) {
+            u->c[1]->p=0;
+            u->c[1]->pp=u;
+            u->c[1]=0;
+            u->fix();
+        }
 		while (Node* pp = u->pp) {
 			pp->splay(); u->pp = 0;
 			if (pp->c[1]) {
