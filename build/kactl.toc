@@ -87,4 +87,5 @@
 \contentsline {subsection}{\numberline {10.5.1}Bit hacks}{24}{subsection.10.5.1}%
 \contentsline {subsection}{\numberline {10.5.2}Pragmas}{24}{subsection.10.5.2}%
 \contentsline {chapter}{\numberline {11}Techniques}{25}{chapter.11}%
+\contentsline {section}{\numberline {11.1}ASCII Art}{25}{section.11.1}%
 \contentsfinish 
