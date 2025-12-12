@@ -13,11 +13,15 @@
 #include "rng.h"
 #include "ModPow.h"
 
+ll mul(ll a, ll b) {
+    return a*b%mod;
+}
 void clear(vi& a){
     while (sz(a)>0 and a.back() < 1) a.pop_back();
 }
 
 vi polymul(vi a, vi b){
+    if(a.empty() or b.empty()) return {};
     vi ans(sz(a)+sz(b)-1);
     rep(i,0,sz(a)) rep(j,0,sz(b)) 
         ans[i+j] += mul(a[i],b[j]), ans[i+j] %= mod; 
@@ -37,10 +41,9 @@ vi polymod(vi& a, vi b){
 }
 
 vi polygcd(vi a, vi b){
-    vi *x = &a, *y = &b;
-    while (!y->empty()) 
-        polymod(*x,*y), swap(x,y);
-    return *x;
+    while (!b.empty()) 
+        polymod(a,b), swap(a,b);
+    return a;
 }
 
 vi powgcd(vi x, ll e, vi a, ll r = 1){
@@ -59,7 +62,7 @@ vi powgcd(vi x, ll e, vi a, ll r = 1){
 void rec(vi a, vi& b){
     if (sz(a) == 2) b.push_back(mul(a[0],modpow(mod-a[1],mod-2)));
     else while(true){
-        vi g = powgcd({rnd(0,mod-1),1},mod/2,a);
+        vi g = powgcd({rnd(0LL,mod-1),1},mod/2,a);
         if (sz(g)>1 and sz(g)<sz(a)){
             rec(g, b);
             rec(polymod(a,g), b);
