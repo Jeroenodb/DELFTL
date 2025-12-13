@@ -14,6 +14,7 @@
  */
 
 #pragma once
+#include "Simplex.h"
 
 struct ILP{
     int n, m;
