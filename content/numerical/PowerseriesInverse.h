@@ -10,14 +10,16 @@
  */
 #include "NumberTheoreticTransform.h"
 #pragma once
+
 vl inverse(vl a, int n){
-    vl b = {modpow(a[0],mod-2)}, m, k;
-    for (int i=1, j; i<n; i*=2){
-        m = vl(a.begin(),min(a.end(),a.begin()+i*2));
-        k = conv(m,b);
-        for (j=0, k[0]-=2; j<sz(k); ++j) k[j] =  (mod-k[j])%mod;
-        b = conv(k,b);
-        b.resize(min(i*2,n));
+    vl b = {modpow(a[0],mod-2)};
+    for(int i = 2; i < n*2;){
+        vl m(all(a)-max(0,sz(a)-i)), g(i*=2);
+        b.resize(i), m.resize(i);
+        vl f = b; ntt(m), ntt(f);
+        rep(j,0,i) g[-j&(i-1)] = mul(mul(f[j],f[j]),m[j]);
+        ntt(g); ll inv = modpow(mod-i, mod-2);
+        rep(j,i/4,i/2) (b[j] += mul(g[j],inv)) %= mod;
     }
     b.resize(n);
     return b;
