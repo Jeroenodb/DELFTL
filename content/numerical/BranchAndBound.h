@@ -2,13 +2,14 @@
  * Author: Leon van der Waal
  * Source: well known
  * License: -
- * Description: Solves an ILP of the form $c^T x$ subject to $Ax \le b$, $x \ge \verb|lo|$, $x \le \verb|hi|$. Only works with non-fractional inputs. It is reccomended to use at least long doubles.
+ * Description: Solves an ILP of the form $c^T x$ subject to $Ax \le b$, $x \ge \text{lo}$, $x \le \text{hi}$. Only works with non-fractional inputs. 
+ * It is recommended to use at least long doubles.
  * Usage:
- * vvd A = {{1,-1}, {-1,1}, {-1,-2}};
- * vd b = {1,1,-4}, c = {-1,-1}, x;
- * ILP ilp(A, b, c);
- * ilp.solve(x);
- * ll ans = llround(ilp.ans);
+ *  vvd A = {{1,-1}, {-1,1}, {-1,-2}};
+ *  vd b = {1,1,-4}, c = {-1,-1}, x;
+ *  ILP ilp(A, b, c);
+ *  ilp.solve(x);
+ *  ll ans = llround(ilp.ans);
  * Time: Depends on the problem. Ask Leon for intuition.
  * Status: seems to work?
  */
