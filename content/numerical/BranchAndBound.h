@@ -2,7 +2,7 @@
  * Author: Leon van der Waal
  * Source: well known
  * License: -
- * Description: Solves an ILP of the form $c^T x$ subject to $Ax \le b$, $x \ge \text{lo}$, $x \le \text$. Only works with non-fractional inputs. 
+ * Description: Solves an ILP of the form $c^T x$ subject to $Ax \le b$, $x \ge \text{lo}$, $x \le \text{hi}$. Only works with non-fractional inputs. 
  * It is recommended to use at least long doubles.
  * Usage:
  *  vvd A = {{1,-1}, {-1,1}, {-1,-2}};
