@@ -1,5 +1,12 @@
+/**
+ * Author: Leon van der Waal
+ * Date: 2024-03-21 
+ * License: CC0
+ * Description: 
+*/
+
 #pragma once
-#include "PowerseriesLogexp.h"
+#include "PowerseriesLog.h"
 
 vl polyexp(vl a, int n){
     vl q = {1}, b, c;
