@@ -111,6 +111,7 @@
 \contentsline {subsection}{\texttt {PowerseriesInverse.h}\hspace {0.2em}}{10}{lstnumber.5.27.12}%
 \contentsline {subsection}{\texttt {PowerseriesLog.h}\hspace {0.2em}}{10}{lstnumber.5.28.13}%
 \contentsline {subsection}{\texttt {PowerseriesExp.h}\hspace {0.2em}}{11}{lstnumber.5.29.18}%
+\contentsline {subsection}{\texttt {PolynomialMod.h}\hspace {0.2em}}{11}{lstnumber.5.30.12}%
 \contentsline {section}{\numberline {5.6}Newton's Method}{11}{section.5.6}%
 \contentsline {chapter}{\numberline {6}Number theory}{11}{chapter.6}%
 \ttl@stoptoc {chapters@5}
@@ -151,37 +152,37 @@
 \contentsline {subsection}{\texttt {GomoryHu.h}\hspace {0.2em}}{14}{lstnumber.7.5.21}%
 \contentsline {section}{\numberline {7.2}Matching}{14}{section.7.2}%
 \contentsline {subsection}{\texttt {hopcroftKarp.h}\hspace {0.2em}}{14}{section.7.2}%
-\contentsline {subsection}{\texttt {DFSMatching.h}\hspace {0.2em}}{14}{lstnumber.7.7.42}%
+\contentsline {subsection}{\texttt {DFSMatching.h}\hspace {0.2em}}{15}{lstnumber.7.7.42}%
 \contentsline {subsection}{\texttt {MinimumVertexCover.h}\hspace {0.2em}}{15}{lstnumber.7.8.18}%
 \contentsline {subsection}{\texttt {WeightedMatching.h}\hspace {0.2em}}{15}{lstnumber.7.9.20}%
 \contentsline {subsection}{\texttt {GeneralMatching.h}\hspace {0.2em}}{15}{lstnumber.7.10.31}%
 \contentsline {section}{\numberline {7.3}DFS algorithms}{15}{section.7.3}%
 \contentsline {subsection}{\texttt {SCC.h}\hspace {0.2em}}{15}{section.7.3}%
 \contentsline {subsection}{\texttt {BiconnectedComponents.h}\hspace {0.2em}}{15}{lstnumber.7.12.24}%
-\contentsline {subsection}{\texttt {BlockCutTree.h}\hspace {0.2em}}{15}{lstnumber.7.13.32}%
+\contentsline {subsection}{\texttt {BlockCutTree.h}\hspace {0.2em}}{16}{lstnumber.7.13.32}%
 \contentsline {subsection}{\texttt {2sat.h}\hspace {0.2em}}{16}{lstnumber.7.14.36}%
 \contentsline {subsection}{\texttt {EulerWalk.h}\hspace {0.2em}}{16}{lstnumber.7.15.56}%
 \contentsline {section}{\numberline {7.4}Coloring}{16}{section.7.4}%
 \contentsline {subsection}{\texttt {EdgeColoring.h}\hspace {0.2em}}{16}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Heuristics}{16}{section.7.5}%
 \contentsline {subsection}{\texttt {MaximalCliques.h}\hspace {0.2em}}{16}{section.7.5}%
-\contentsline {subsection}{\texttt {MaximumClique.h}\hspace {0.2em}}{16}{lstnumber.7.18.12}%
+\contentsline {subsection}{\texttt {MaximumClique.h}\hspace {0.2em}}{17}{lstnumber.7.18.12}%
 \contentsline {subsection}{\texttt {MaximumIndependentSet.h}\hspace {0.2em}}{17}{lstnumber.7.19.49}%
 \contentsline {section}{\numberline {7.6}Trees}{17}{section.7.6}%
 \contentsline {subsection}{\texttt {BinaryLifting.h}\hspace {0.2em}}{17}{section.7.6}%
 \contentsline {subsection}{\texttt {LCA.h}\hspace {0.2em}}{17}{lstnumber.7.21.25}%
 \contentsline {subsection}{\texttt {CompressTree.h}\hspace {0.2em}}{17}{lstnumber.7.22.21}%
 \contentsline {subsection}{\texttt {HLD.h}\hspace {0.2em}}{17}{lstnumber.7.23.21}%
-\contentsline {subsection}{\texttt {LinkCutTree.h}\hspace {0.2em}}{17}{lstnumber.7.24.46}%
+\contentsline {subsection}{\texttt {LinkCutTree.h}\hspace {0.2em}}{18}{lstnumber.7.24.46}%
 \contentsline {subsection}{\texttt {DirectedMST.h}\hspace {0.2em}}{18}{lstnumber.7.25.96}%
 \contentsline {section}{\numberline {7.7}Math}{18}{section.7.7}%
 \contentsline {subsection}{\numberline {7.7.1}Number of Spanning Trees}{18}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Erdős–Gallai theorem}{18}{subsection.7.7.2}%
-\contentsline {chapter}{\numberline {8}Geometry}{18}{chapter.8}%
+\contentsline {subsection}{\numberline {7.7.2}Erdős–Gallai theorem}{19}{subsection.7.7.2}%
+\contentsline {chapter}{\numberline {8}Geometry}{19}{chapter.8}%
 \ttl@stoptoc {chapters@7}
 \ttl@starttoc {chapters@8}
-\contentsline {section}{\numberline {8.1}Geometric primitives}{18}{section.8.1}%
-\contentsline {subsection}{\texttt {GeoBoilerplate.h}\hspace {0.2em}}{18}{section.8.1}%
+\contentsline {section}{\numberline {8.1}Geometric primitives}{19}{section.8.1}%
+\contentsline {subsection}{\texttt {GeoBoilerplate.h}\hspace {0.2em}}{19}{section.8.1}%
 \contentsline {subsection}{\texttt {Point.h}\hspace {0.2em}}{19}{lstnumber.8.1.18}%
 \contentsline {subsection}{\texttt {OnSegment.h}\hspace {0.2em}}{19}{lstnumber.8.2.28}%
 \contentsline {subsection}{\texttt {lineDistance.h}\hspace {0.2em}}{19}{lstnumber.8.3.3}%
@@ -192,7 +193,7 @@
 \contentsline {section}{\numberline {8.2}Circles}{19}{section.8.2}%
 \contentsline {subsection}{\texttt {CircleIntersection.h}\hspace {0.2em}}{19}{section.8.2}%
 \contentsline {subsection}{\texttt {CircleTangents.h}\hspace {0.2em}}{19}{lstnumber.8.9.10}%
-\contentsline {subsection}{\texttt {CircleLine.h}\hspace {0.2em}}{19}{lstnumber.8.10.12}%
+\contentsline {subsection}{\texttt {CircleLine.h}\hspace {0.2em}}{20}{lstnumber.8.10.12}%
 \contentsline {subsection}{\texttt {CirclePolygonIntersection.h}\hspace {0.2em}}{20}{lstnumber.8.11.8}%
 \contentsline {subsection}{\texttt {circumcircle.h}\hspace {0.2em}}{20}{lstnumber.8.12.17}%
 \contentsline {subsection}{\texttt {MinimumEnclosingCircle.h}\hspace {0.2em}}{20}{lstnumber.8.13.8}%
@@ -226,7 +227,7 @@
 \contentsline {section}{\texttt {SuffixTree.h}\hspace {0.2em}}{23}{lstnumber.9.5.22}%
 \contentsline {section}{\texttt {SuffixTreeExample.h}\hspace {0.2em}}{23}{lstnumber.9.6.32}%
 \contentsline {section}{\texttt {Hashing.h}\hspace {0.2em}}{23}{lstnumber.9.7.16}%
-\contentsline {section}{\texttt {AhoCorasick.h}\hspace {0.2em}}{23}{lstnumber.9.8.44}%
+\contentsline {section}{\texttt {AhoCorasick.h}\hspace {0.2em}}{24}{lstnumber.9.8.44}%
 \contentsline {chapter}{\numberline {10}Various}{24}{chapter.10}%
 \ttl@stoptoc {chapters@9}
 \ttl@starttoc {chapters@10}
@@ -238,9 +239,9 @@
 \contentsline {section}{\numberline {10.3}Dynamic programming}{24}{section.10.3}%
 \contentsline {subsection}{\texttt {KnuthDP.h}\hspace {0.2em}}{24}{section.10.3}%
 \contentsline {subsection}{\texttt {DivideAndConquerDP.h}\hspace {0.2em}}{24}{lstnumber.10.4.1}%
-\contentsline {section}{\numberline {10.4}Debugging tricks}{24}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Optimization tricks}{24}{section.10.5}%
-\contentsline {subsection}{\numberline {10.5.1}Bit hacks}{24}{subsection.10.5.1}%
+\contentsline {section}{\numberline {10.4}Debugging tricks}{25}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Optimization tricks}{25}{section.10.5}%
+\contentsline {subsection}{\numberline {10.5.1}Bit hacks}{25}{subsection.10.5.1}%
 \contentsline {subsection}{\texttt {FastMod.h}\hspace {0.2em}}{25}{subsection.10.5.1}%
 \contentsline {subsection}{\texttt {FastInput.h}\hspace {0.2em}}{25}{lstnumber.10.6.8}%
 \contentsline {subsection}{\texttt {BumpAllocator.h}\hspace {0.2em}}{25}{lstnumber.10.7.17}%
