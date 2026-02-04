@@ -6,9 +6,10 @@
  * Time: $O(\log N)$
  * Status: stress-tested
  */
+#include "Treap.h"
 Node* ins(Node* t, Node* n, int pos) {
-	auto pa = split(t, pos);
-	return merge(merge(pa.first, n), pa.second);
+	auto [l,r] = split(t, pos);
+	return merge(merge(l, n), r);
 }
 void move(Node*& t, int l, int r, int k) {
 	Node *a, *b, *c;
