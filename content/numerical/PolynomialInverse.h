@@ -1,23 +1,23 @@
 /**
  * Author: Leon van der Waal
  * Date: 12-10-2023
- * Description: Returns the first $n$ terms of the inverse of a generating function. Only works if $n$ is a power of 2. Uses modular convolution.
+ * Description: Returns the first $n$ terms of the inverse of a generating function. Only works if $n$ is a power of 2. Uses modular convolution. This version only requires convolution, not necessarily NTT.
  * Time: $O(n\log(n))$
  */
 
 #pragma once
+#include "NumberTheoreticTransform.h"
 
 
-
-// n has to be a power of 2
-vl polyInv(const vl& a, const int n){
-	assert((n-1)&n==0); // n has to be a power of 2
-    if(n==1) return {modpow(a[0],mod-2)};
-    vl aslice=a; aslice.resize(n);
-    vl b = polyInv(a, n/2);
-    vl b2 = conv(b,b);
-    vl ans = conv(b2,aslice);
-    for(int i=0;i<n/2;++i) ans[i] -= b[i]*2;
-    for(auto& x : ans) x = (mod-x)%mod;
-    return {ans.begin(), ans.begin() + n};
+vl inverse(vl a, int n){
+    vl b = {modpow(a[0],mod-2)}, m, k;
+    for (int i=1, j; i<n; i*=2){
+        m = vl(a.begin(),begin(a) + min(sz(a),i*2));
+        k = conv(m,b);
+        for (j=0, k[0]-=2; j<sz(k); ++j) k[j] = (mod-k[j])%mod;
+        b = conv(k,b);
+        b.resize(min(i*2,n));
+    }
+    b.resize(n);
+    return b;
 }
