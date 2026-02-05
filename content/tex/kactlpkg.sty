@@ -14,10 +14,12 @@
 % Conditional setup for different margins based on page parity
 \usepackage{changepage}
 \usepackage{bophook}
+% \AtBeginPage{ % for double-sided.
+%   \ifodd\count0 \global\voffset=0mm \else \global\voffset=4.5mm \fi
+% }
 \AtBeginPage{%
-  \ifodd\count0 \global\voffset=0mm \else \global\voffset=4.5mm \fi
+  \global\voffset=4.5mm
 }
-
 \usepackage{multicol}                   % Split page in multiple columns
 \usepackage{fancyhdr}                   % Fancy headers
 \usepackage{amsbsy, amssymb, amsmath}   % Enable math symbols
