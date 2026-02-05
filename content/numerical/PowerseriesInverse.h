@@ -1,25 +1,22 @@
 /**
  * Author: Leon van der Waal
- * Date: 2024-03-21
- * License: CC0
- * Source: based on inverse calculations in cp-algorithms.com
- * Description: Calculates the inverse of the power series $(\sum a[i] x^i) \mod x^n$. $a[0]$ must be nonzero. Uses NTT, but can be swapped out for ConvMod.
- * Inputs must be in [0, mod).
- * Time: $O(N \log N)$
- * Status: tested on Library Checker, inv of formal power series
+ * Date: 12-10-2023
+ * Description: Returns the first $n$ terms of the inverse of a generating function. Uses modular convolution. This version only requires convolution, not necessarily NTT.
+ * Time: $O(n\log(n))$
  */
-#include "NumberTheoreticTransform.h"
+
 #pragma once
+#include "NumberTheoreticTransform.h"
+
 
 vl inverse(vl a, int n){
-    vl b = {modpow(a[0],mod-2)};
-    for(int i = 2; i < n*2;){
-        vl m(all(a)-max(0,sz(a)-i)), g(i*=2);
-        b.resize(i), m.resize(i);
-        vl f = b; ntt(m), ntt(f);
-        rep(j,0,i) g[-j&(i-1)] = mul(mul(f[j],f[j]),m[j]);
-        ntt(g); ll inv = modpow(mod-i, mod-2);
-        rep(j,i/4,i/2) (b[j] += mul(g[j],inv)) %= mod;
+    vl b = {modpow(a[0],mod-2)}, m, k;
+    for (int i=1, j; i<n; i*=2){
+        m = vl(a.begin(),begin(a) + min(sz(a),i*2));
+        k = conv(m,b);
+        for (j=0, k[0]-=2; j<sz(k); ++j) k[j] = (mod-k[j])%mod;
+        b = conv(k,b);
+        b.resize(min(i*2,n));
     }
     b.resize(n);
     return b;

@@ -8,7 +8,7 @@
  * Time: $O(N \log N)$
  * Status: Tested on Log and Exp of formal power series on Library Checker
  */
-#include "PowerseriesInverse.h"
+#include "PowerseriesInverseFast.h"
 #pragma once
 
 vl integrate(vl a){
